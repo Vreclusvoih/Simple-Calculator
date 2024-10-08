@@ -45,7 +45,7 @@ class WidgetAR(QtWidgets.QWidget, Ui_widget):
         
         if '√' or '^' or 'x' in a:
             b = [x.replace('^', '**') for x in a]
-        #   b = [x.replace('√', '** 0.5') for x in b] NOT IMPLEMENTED
+            b = [x.replace('√', '0.5 **') for x in b] 
             b = [x.replace('x', '*') for x in b]
             c = ''
 
@@ -67,11 +67,13 @@ class WidgetAR(QtWidgets.QWidget, Ui_widget):
         
          
 
-    # def sqrt_func(self):
-    #     a = self.label.text()
-    #     self.label.setText(a + '√') NOT IMPLEMENTED
-    #     if len(a) >= 34:
-    #         self.label.setText(a[:-1])
+      
+    def sqrt_func(self):
+          a = self.label.text()
+          self.label.setText(a + '√')
+
+          if len(a) >= 34:
+              self.label.setText(a[:-1])
 
     def addition(self):
         a = self.label.text()
