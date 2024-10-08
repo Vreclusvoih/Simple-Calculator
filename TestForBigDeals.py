@@ -32,7 +32,7 @@ class WidgetAR(QtWidgets.QWidget, Ui_widget):
         self.minusButton.clicked.connect(self.subtraction)
         self.divisionButton.clicked.connect(self.division_func)
         self.eButton.clicked.connect(self.value_e)
-        # self.rootOfButton.clicked.connect(self.sqrt_func) NOT IMPLEMENTED
+         self.rootOfButton.clicked.connect(self.sqrt_func)
         self.multiplicationButton.clicked.connect(self.multiplication_func)
         self.degreeButton.clicked.connect(self.degree_func)
         self.oneOfButton.clicked.connect(self.one_of_func)
